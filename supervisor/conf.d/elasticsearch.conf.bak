@@ -1,0 +1,14 @@
+[program:elasticsearch]
+command=/usr/local/bin/elasticsearch-server /Users/chenjun/data/apps/elasticsearch/conf/elasticsearch.conf
+directory=/Users/chenjun/data/apps/elasticsearch
+user=chenjun
+autostart=false
+autorestart=false
+startretries=3
+redirect_stderr=true
+stdout_logfile = /Users/chenjun/data/logs/supervisor/elasticsearch/elasticsearch-stderr.log
+stderr_logfile_maxbytes=20MB
+stderr_logfile_backups=2
+stdout_logfile=/Users/chenjun/data/logs/supervisor/elasticsearch/elasticsearch-stdout.log
+stdout_logfile_maxbytes=20MB
+stdout_logfile_backups=2
